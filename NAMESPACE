@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(httr, GET)
+importFrom(httr, content)
+importFrom(httr, add_headers)
+importFrom(htmlTable, htmlTable)
+importFrom(methods, is)
+importFrom(utils, download.file)
+import(sp)
