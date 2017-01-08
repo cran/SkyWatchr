@@ -1,7 +1,9 @@
-b005addb419a17aa912afa4bafa5098c *DESCRIPTION
+f76df7da7c94f9aeb533d47dc2cf4018 *DESCRIPTION
 3ec6eae5be0baf15f793574414929351 *NAMESPACE
-b7a7eaf41745f92912c16cf242fae576 *R/downloadSW.R
-dd4e681f5b337c70d4a77790c19a65cc *R/querySW.R
-99a7f158e26fe70b122ba6228fbcfb7f *man/SkyWatchr-package.Rd
-e9a08e25c35f4b72159aedca4d050acc *man/downloadSW.Rd
-a625caaf07c473f6dbdce5e7ea41f500 *man/querySW.Rd
+34aa9d468f32ee780cf1bbb2f29fd5ba *R/downloadSW.R
+7bd49e8cbda34b801ad7a20b7a0789de *R/getPolygon.R
+d21e72e2e040ec42c2999c50e1985f9b *R/querySW.R
+9d5408a7171c613db4850a5275e47f17 *man/SkyWatchr-package.Rd
+613b37755aca989c59c57cdac64338d2 *man/downloadSW.Rd
+b19b42a21c2e57560cb2d2ffe317a571 *man/getPolygon.Rd
+76e451f92654c727943f3452fc195692 *man/querySW.Rd

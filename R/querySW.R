@@ -1,5 +1,13 @@
-querySW <- function(api_key, time_period = NULL, longitude_latitude, instrument_satellite = NULL, data_level = NULL, 
+querySW <- function(api_key = NULL, time_period, longitude_latitude, instrument_satellite = NULL, data_level = NULL, 
                     max_resolution = NULL, max_cloudcover = NULL, wavelength_band = NULL, output = "data.frame"){
+  
+  if (is.null(api_key)) {
+    api_key <- getOption("SkyWatchr.apikey")
+    
+    if(is.null(api_key)) {
+      message("You need to set an API key via options(SkyWatchr.apikey = 'your_api_key')")
+    }
+  }
   
   if (is.null(time_period)) time_period <- Sys.Date()
   

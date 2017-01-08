@@ -36,7 +36,10 @@ Returns nothing
 \dontrun{
 api_key <- "your_personal_alphanumeric_api_key"
 
-res <- querySW(api_key, time_period = "2015-06", coordinates = "31.321119,48.676074", 
+# Set the SkyWatchr.apikey option 
+options(SkyWatchr.apikey = api_key)
+
+res <- querySW(time_period = "2015-06", longitude_latitude = "31.321119,48.676074", 
                data_level = 3)
 View(res)
 
