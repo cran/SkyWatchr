@@ -8,7 +8,7 @@ Download satellite imagery and climate/atmospheric datasets using the SkyWatch A
 Download satellite imagery and climate/atmospheric datasets using the SkyWatch API based on a query output object obtained from the querySW function.
 }
 \usage{
-downloadSW(x, subset)
+downloadSW(x, subset, api_key = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,6 +17,9 @@ data.frame returned by the querySW function
 }
   \item{subset}{
 logical expression indicating elements or rows to keep. See details
+}
+  \item{api_key}{
+string; personal alphanumeric API key. See Details section
 }
 }
 \details{
@@ -39,7 +42,7 @@ api_key <- "your_personal_alphanumeric_api_key"
 # Set the SkyWatchr.apikey option 
 options(SkyWatchr.apikey = api_key)
 
-res <- querySW(time_period = "2015-06", longitude_latitude = "31.321119,48.676074", 
+res <- querySW(time_period = "2015-06", longitude_latitude = "48.676074,31.321119", 
                data_level = 3)
 View(res)
 

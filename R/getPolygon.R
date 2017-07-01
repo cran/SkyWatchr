@@ -1,5 +1,5 @@
 getPolygon <- function(x, index){
-  p1 <- x[index, 1]
+  p1 <- x[index, "area"]
   p2 <- gsub(" ", ",", strsplit(strsplit(p1, "POLYGON((", fixed = TRUE)[[1]][2], ")")[[1]][1])
   p3 <- as.numeric(strsplit(p2, ",")[[1]])
   xy <- matrix(p3, ncol=2, byrow=TRUE)

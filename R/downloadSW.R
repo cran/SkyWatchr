@@ -1,4 +1,12 @@
-downloadSW <- function(x, subset){
+downloadSW <- function(x, subset, api_key = NULL){
+  
+  if (is.null(api_key)) {
+    api_key <- getOption("SkyWatchr.apikey")
+    
+    if(is.null(api_key)) {
+      message("You need to set an API key via options(SkyWatchr.apikey = 'your_api_key')")
+    }
+  }
   
   if(missing(subset)){
     r <- rep_len(TRUE, nrow(x))
@@ -9,11 +17,11 @@ downloadSW <- function(x, subset){
   x <- x[r,]
   
   for(i in 1:nrow(x)){
+    cat(paste0("Downloading ", i, "/", nrow(x), " ...", "\n"))
     urli <- x[i, "download_path"]
-    elems <- unlist(strsplit(urli, "/", fixed = TRUE))
-    file_name <- strsplit(elems[length(elems)], "?", fixed = TRUE)[[1]][1]
-    cat(paste0("Downloading ", file_name, "... (", i, "/", nrow(x), ")", "\n"))
-    download.file(urli, file_name, mode = "wb")
+    file_name <- paste0(x[i, "source"], "_", strsplit(urli, "/")[[1]][5], "_", x[i, "band"],  "_", strsplit(urli, "/")[[1]][4], ".", 
+                        x[i, "type"])
+    GET(x[i, "download_path"], add_headers('x-api-key' = api_key), write_disk(file_name))
   }
   cat(paste0("\n", "All requested files have been downloaded to: ", getwd()))
 }

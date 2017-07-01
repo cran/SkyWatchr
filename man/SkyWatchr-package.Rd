@@ -3,7 +3,7 @@
 \alias{SkyWatchr-package}
 \docType{package}
 \title{
-Wrapper for the SkyWatch API
+Search and Download Satellite Imagery using the SkyWatch API
 }
 \description{
 Query and download satellite imagery and climate/atmospheric datasets using the SkyWatch API. 
@@ -16,8 +16,8 @@ Query and download satellite imagery and climate/atmospheric datasets using the 
 \tabular{ll}{
 Package: \tab SkyWatchr\cr
 Type: \tab Package\cr
-Version: \tab 0.5-1\cr
-Date: \tab 2017-01-08\cr
+Version: \tab 0.8-2\cr
+Date: \tab 2017-06-30\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }

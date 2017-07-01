@@ -29,7 +29,7 @@ api_key <- "your_personal_alphanumeric_api_key"
 options(SkyWatchr.apikey = api_key)
 
 res <- querySW(time_period = "2015-8", longitude_latitude = "-71.1043443,-42.3150676")
-sppolygon <- getPolygon(res, 55)
+sppolygon <- getPolygon(res, 61)
 
 library(mapview)
 mapView(sppolygon)

@@ -79,20 +79,20 @@ api_key <- "your_personal_alphanumeric_api_key"
 options(SkyWatchr.apikey = api_key)
 
 # Query data for one of the world largest landfills "Olusosun Dump" in Nigeria
-querySW(time_period = "2015-8", longitude_latitude = "6.566358,3.367358,6.586358,3.387358")
+querySW(time_period = "2015-8", longitude_latitude = "3.367358,6.566358,3.387358,6.586358")
 
 # If the SkyWatchr.apikey option is not set, then provide the API key
-querySW(api_key, time_period = "2015-8", longitude_latitude = "6.566358,3.367358,6.586358,3.387358")
+querySW(api_key, time_period = "2015-8", longitude_latitude = "3.367358,6.566358,3.387358,6.586358")
 
 # An Imperial Oil refinery in Canada
-res <- querySW(time_period = 2015, longitude_latitude = "36.281389,-80.060278", data_level = 3)
+res <- querySW(time_period = 2015, longitude_latitude = "-82.4169987,42.954811", data_level = 3)
 View(res)
 
 # The smoggiest city on Earth Ahvaz, Iran
-querySW(time_period = "2015-06", longitude_latitude = "31.321119,48.676074", data_level = 3)
+querySW(time_period = "2015-06", longitude_latitude = "48.676074,31.321119", data_level = 3)
 
 # Ahvaz, Iran in September, 2015
-querySW(time_period = "2015-9", longitude_latitude = "31.321119,48.676074", data_level = 1, 
+querySW(time_period = "2015-9", longitude_latitude = "48.676074,31.321119", data_level = 1, 
         wavelength_band = "red,green,blue")
 
 # Other examples
@@ -106,7 +106,7 @@ querySW(time_period = "2016-07-11,2016-07-12",
         max_cloudcover = 100, wavelength_band = "Blue")
 
 # Print output data.frame as html
-querySW(time_period = "2015-8", longitude_latitude = "6.56635,3.36735,6.58635,3.38735", 
+querySW(time_period = "2015-8", longitude_latitude = "3.367358,6.566358,3.387358,6.586358", 
         output = "html")
 querySW(time_period = "2016-07-11,2016-07-12", 
         longitude_latitude = "-71.1,-42.3,71.1,-42.3,71.1,42.3,-71.1,42.3,-71.1,-42.3",
